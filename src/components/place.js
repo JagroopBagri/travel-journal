@@ -1,34 +1,30 @@
 import React from 'react';
 import data from '../data';
 import pin from '../images/pin.png';
-function Card() {
+function Card(props) {
   return (
     <section className="card">
       <div className="image">
-        <img
-          src="https://lp-cms-production.imgix.net/2021-05/shutterstockRF_1563449509.jpg?auto=format&fit=crop&sharp=10&vib=20&ixlib=react-8.6.4&w=850&q=75&dpr=1"
-          alt="view-of-santorini"
-        />
+        <img src={props.item.image} alt={'picture-of' + props.item.title} />
       </div>
       <div className="information">
         <div className="location">
           <div className="country">
             <img className="pin" src={pin} alt="pin-logo" />
-            <div>Greece</div>
+            <div>{props.item.location}</div>
           </div>
-          <div className="google">view on google</div>
+          <a
+            className="google"
+            href={props.item.link}
+            target="_blank"
+            rel="noreferrer"
+          >
+            View on Google Maps
+          </a>
         </div>
-        <div className="name">Santorini</div>
-        <div className="dates">Aug 2021 - Sep 2021</div>
-        <div className="summary">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci
-          ipsam eius accusantium aliquam, eveniet eligendi architecto sapiente
-          dicta ex in, quasi vel quod sequi nihil hic dolorum. Dolore, rerum
-          laborum! Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-          Consequatur, aperiam numquam illum dolorum similique error libero
-          voluptates culpa tempore explicabo atque consectetur esse. Tempore
-          quam natus nemo maxime, excepturi consequuntur?
-        </div>
+        <div className="name">{props.item.title}</div>
+        <div className="dates">{props.item.start + '-' + props.item.end}</div>
+        <div className="summary">{props.item.description}</div>
       </div>
     </section>
   );
@@ -36,14 +32,9 @@ function Card() {
 
 function Place() {
   let locations = data.map((location) => {
-    return <div>testing</div>;
+    return <Card key={location.id} item={location} />;
   });
-  console.log(locations);
-  return (
-    <>
-      <Card />
-    </>
-  );
+  return <>{locations}</>;
 }
 
 export default Place;

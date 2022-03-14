@@ -5,6 +5,10 @@
 body {
   height: 100vh;
   width: 100vw;
+  min-height: 500px;
+  min-width: 950px;
+  overflow: auto;
+  padding: 20px;
 }
 
 .App,
@@ -24,8 +28,8 @@ header {
   width: 90%;
   min-width: 500px;
   max-width: 950px;
-  min-height: 40px;
-  max-height: 60px;
+  min-height: 60px;
+  max-height: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -44,7 +48,7 @@ header div {
   margin-top: 35px;
 }
 .image {
-  height: 90%;
+  height: 300px;
   width: 325px;
   align-self: center;
 }
@@ -60,7 +64,7 @@ img {
   width: 15px;
 }
 .location {
-  margin-bottom: 12px;
+  margin-bottom: 30px;
   width: 250px;
   display: flex;
   justify-content: space-between;
@@ -79,7 +83,7 @@ img {
   font-size: 2.2rem;
   width: 350px;
   font-weight: bold;
-  margin-bottom: 50px;
+  margin-bottom: 25px;
 }
 .dates {
   margin-bottom: 12px;
@@ -89,7 +93,7 @@ img {
 }
 .summary {
   width: 500px;
-  height: 138px;
+  height: 150px;
   overflow: auto;
   font-size: 1rem;
 }
