@@ -1,6 +1,6 @@
 import React from 'react';
 import data from '../data';
-
+import pin from '../images/pin.png';
 function Card() {
   return (
     <section className="card">
@@ -13,14 +13,22 @@ function Card() {
       <div className="information">
         <div className="location">
           <div className="country">
-            <div>pin</div>
+            <img className="pin" src={pin} alt="pin-logo" />
             <div>Greece</div>
           </div>
           <div className="google">view on google</div>
         </div>
         <div className="name">Santorini</div>
         <div className="dates">Aug 2021 - Sep 2021</div>
-        <div className="summary">beautiful island</div>
+        <div className="summary">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci
+          ipsam eius accusantium aliquam, eveniet eligendi architecto sapiente
+          dicta ex in, quasi vel quod sequi nihil hic dolorum. Dolore, rerum
+          laborum! Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+          Consequatur, aperiam numquam illum dolorum similique error libero
+          voluptates culpa tempore explicabo atque consectetur esse. Tempore
+          quam natus nemo maxime, excepturi consequuntur?
+        </div>
       </div>
     </section>
   );
